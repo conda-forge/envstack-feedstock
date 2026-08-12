@@ -1,5 +1,5 @@
 {% set name = "envstack" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8f8431395e74b64cd484be2bd90fd79995803c2880b14292af0938edecd19797
+  sha256: d7296c97de2c3972c57aa120c77275a666214bc88029d5ea13fba0004e4996a6
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - envstack=envstack.cli:main
-    - whichenv="envstack.cli:whichenv"
+    - whichenv=envstack.cli:whichenv
 
 requirements:
   host:
