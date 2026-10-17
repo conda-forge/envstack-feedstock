@@ -1,13 +1,13 @@
 {% set name = "envstack" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d7296c97de2c3972c57aa120c77275a666214bc88029d5ea13fba0004e4996a6
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f438a39bf8915092ff5037d095b4458dbde4b8bd3bad62c0d5f94046cc571a64
 
 build:
   noarch: python
